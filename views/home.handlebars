@@ -1,23 +1,27 @@
 <h1>Lista de Filmes e Séries</h1>
 
+<a href="/cadastrar">
+    <button>Cadastrar Filme</button>
+</a>
+
 <div class="container">
 
-{{#each filmes}}
+    {{#each filmes}}
 
-<div class="card">
+    <div class="card">
 
-    <h2>{{nome}}</h2>
+        <h2>{{nome}}</h2>
 
-    <p><strong>Ano:</strong> {{ano}}</p>
+        <p><strong>Ano:</strong> {{ano}}</p>
 
-    <p><strong>Gênero:</strong> {{genero}}</p>
+        <p><strong>Gênero:</strong> {{genero}}</p>
 
-    <p><strong>Diretor:</strong> {{diretor}}</p>
+        <p><strong>Diretor:</strong> {{diretor}}</p>
 
-    <p><strong>Nota:</strong> {{nota}}</p>
+        <p><strong>Nota:</strong> {{nota}}</p>
 
-</div>
+    </div>
 
-{{/each}}
+    {{/each}}
 
 </div>

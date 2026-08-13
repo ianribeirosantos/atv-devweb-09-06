@@ -1,0 +1,49 @@
+<h1>Editar Artista</h1>
+
+<form action="/artistas/editar/{{artista.id}}" method="POST">
+
+    <input
+        type="text"
+        name="nome"
+        value="{{artista.nome}}"
+        placeholder="Nome"
+        required
+    >
+
+    <input
+        type="number"
+        name="anoNascimento"
+        value="{{artista.anoNascimento}}"
+        placeholder="Ano de nascimento"
+        required
+    >
+
+    <input
+        type="text"
+        name="foto"
+        value="{{artista.foto}}"
+        placeholder="URL da foto"
+        required
+    >
+
+    <label>
+
+        <input
+            type="checkbox"
+            name="emAtividade"
+            {{#if artista.emAtividade}}checked{{/if}}
+        >
+
+        Em atividade
+
+    </label>
+
+    <button type="submit">
+        Salvar alterações
+    </button>
+
+</form>
+
+<a href="/artistas">
+    <button>Cancelar</button>
+</a>

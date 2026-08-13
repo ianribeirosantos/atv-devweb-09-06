@@ -1,0 +1,41 @@
+<h1>Lista de Artistas</h1>
+
+<a href="/artistas/cadastrar">
+    <button>Cadastrar Artista</button>
+</a>
+
+<div class="container">
+
+    {{#each artistas}}
+
+    <div class="card">
+
+        <img
+            src="{{foto}}"
+            alt="Foto de {{nome}}"
+            class="foto-artista"
+        >
+
+        <h2>{{nome}}</h2>
+
+        <div class="acoes">
+
+            <a href="/artistas/{{id}}">
+                <button type="button">Detalhes</button>
+            </a>
+
+            <a href="/artistas/editar/{{id}}">
+                <button type="button">Editar</button>
+            </a>
+
+            <form action="/artistas/excluir/{{id}}" method="POST">
+                <button type="submit">Excluir</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    {{/each}}
+
+</div>

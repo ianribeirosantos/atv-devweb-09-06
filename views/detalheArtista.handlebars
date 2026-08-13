@@ -1,0 +1,40 @@
+<h1>{{artista.nome}}</h1>
+
+<div class="card">
+
+    <img
+        src="{{artista.foto}}"
+        alt="Foto de {{artista.nome}}"
+        class="foto-artista"
+    >
+
+    <p>
+        <strong>Nome:</strong>
+        {{artista.nome}}
+    </p>
+
+    <p>
+        <strong>Ano de nascimento:</strong>
+        {{artista.anoNascimento}}
+    </p>
+
+    <p>
+        <strong>Em atividade:</strong>
+
+        {{#if artista.emAtividade}}
+            Sim
+        {{else}}
+            Não
+        {{/if}}
+
+    </p>
+
+    <a href="/artistas/editar/{{artista.id}}">
+        <button>Editar</button>
+    </a>
+
+    <a href="/artistas">
+        <button>Voltar</button>
+    </a>
+
+</div>

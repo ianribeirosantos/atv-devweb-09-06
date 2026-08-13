@@ -1,0 +1,38 @@
+<h1>Cadastrar Artista</h1>
+
+<form action="/artistas" method="POST">
+
+    <input
+        type="text"
+        name="nome"
+        placeholder="Nome"
+        required
+    >
+
+    <input
+        type="number"
+        name="anoNascimento"
+        placeholder="Ano de nascimento"
+        required
+    >
+
+    <input
+        type="text"
+        name="foto"
+        placeholder="URL da foto"
+        required
+    >
+
+    <label>
+        <input
+            type="checkbox"
+            name="emAtividade"
+        >
+        Em atividade
+    </label>
+
+    <button type="submit">
+        Cadastrar Artista
+    </button>
+
+</form>
